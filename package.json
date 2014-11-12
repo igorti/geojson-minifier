@@ -1,0 +1,24 @@
+{
+  "name": "geojson-minifier",
+  "description": "Minify GeoJSON files by encoding geometries",
+  "version": "1.0.0",
+  "repository": "git@github.com:igorti/geojson-minifier.git",
+  "main": "index.js",
+  "author": {
+    "name": "Igor Tihonov",
+    "url": "http://igortihonov.com/",
+    "email": "contact@igortihonov.com"
+  },
+  "keywords": [
+    "geojson"
+  ],
+  "dependencies": {
+    "minimist": "^0.1.0"
+  },
+  "scripts": {
+      "start": "./index.js"
+  },
+  "bin": {
+      "geojson-minifier": "./cli.js"
+  }
+}
