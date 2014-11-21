@@ -7,6 +7,11 @@ GeojsonMinifier.prototype.pack = function(geojson) {
     for (var i = 0; i < geojson.features.length; i++) {
       var geometry = geojson.features[i].geometry;
 
+      if (!geometry) {
+        geometry = null;
+        continue;
+      }
+
       switch(geometry.type) {
         case 'Point':
           console.log("Skipping point geometries");
@@ -34,6 +39,11 @@ GeojsonMinifier.prototype.unpack = function(geojson) {
   if (geojson && geojson.features) {
     for (var i = 0; i < geojson.features.length; i++) {
       var geometry = geojson.features[i].geometry;
+
+      if (!geometry) {
+        geometry = null;
+        continue;
+      }
 
       switch(geometry.type) {
         case 'Point':

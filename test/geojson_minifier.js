@@ -19,10 +19,21 @@ describe('GeojsonMinifier', function(){
     });
   });
 
-  describe('pack()', function() {
+  describe('unpack()', function() {
     it('should unpack minified geojson', function() {
       var _unpacked = minifier.unpack(JSON.parse(packed));
       assert.equal(unpacked, _unpacked);
+    });
+  });
+
+  describe('null geometries', function(){
+    it('should handle null geometries', function() {
+      var null_geom = {type:"FeatureCollection",features:[{type:"Feature",geometry:null}]};
+      var _packed = minifier.pack(null_geom);
+      var _unpacked = minifier.unpack(null_geom);
+
+      assert.equal(_packed, JSON.stringify(null_geom));
+      assert.equal(_unpacked, JSON.stringify(null_geom));
     });
   });
 });
