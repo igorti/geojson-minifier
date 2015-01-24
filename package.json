@@ -2,7 +2,7 @@
   "name": "geojson-minifier",
   "description": "Minify GeoJSON files by encoding geometries",
   "url": "https://github.com/igorti/geojson-minifier",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "repository": "git@github.com:igorti/geojson-minifier.git",
   "author": {
