@@ -7,7 +7,7 @@ geometries. Depending on data, you can shrink file size up to 2-4 times, sometim
 Either fetch source code or install with `npm`:
 
 ```bash
-npm install geojson-minifier
+npm install -g geojson-minifier
 ```
 
 This will give you `geojson-minifier` command.
